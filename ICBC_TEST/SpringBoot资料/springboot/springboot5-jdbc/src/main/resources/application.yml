@@ -1,0 +1,39 @@
+logging:
+  level:
+    ROOT: info
+    com.icbc.sh.mapper: debug
+
+spring:
+  #  devtools:
+  #    restart:
+  #      enabled: true
+  #      additional-exclude: static/**,.h2.server.properties
+  #      additional-paths: src/main/java, src/main/resources/mockFile
+  #    livereload:
+  #      enabled: false # we use Webpack dev server + BrowserSync for livereload
+#  jackson:
+#    serialization:
+#      indent-output: true
+
+  datasource:
+    #账号配置
+    url: jdbc:oracle:thin:@107.6.13.46:1521:cospndb
+#    url: xxxxx
+    username: cospn
+    password: cospn
+    driver-class-name: oracle.jdbc.OracleDriver
+    #    url: jdbc:mysql://107.6.13.203:3306/bchv2?useSSL=false
+    #    username: bchv2
+    #    password: pass.123
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    #hikari数据库连接池
+    hikari:
+      pool-name: Retail_HikariCP
+      minimum-idle: 0 #最小空闲连接数量
+      idle-timeout: 180000 #空闲连接存活最大时间，默认600000（10分钟）
+      maximum-pool-size: 10 #连接池最大连接数，默认是10
+      auto-commit: true  #此属性控制从池返回的连接的默认自动提交行为,默认值：true
+      max-lifetime: 1800000 #此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认1800000即30分钟
+      connection-timeout: 30000 #数据库连接超时时间,默认30秒，即30000
+      connection-test-query: SELECT 1 FROM DUAL

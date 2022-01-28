@@ -1,0 +1,27 @@
+ICBC-wifi:
+newemp
+newemp2021
+
+git:
+java -jar infosender.jar
+
+VMWare:
+sqlplus "/as sysdba"
+startup
+exit
+lsnrctl start
+
+PL/SQL：
+homework
+homework
+192.168.131.130:1521/orcl
+Normal
+
+VMWare:
+lsnrctl stop
+sqlplus "/as sysdba"
+shutdown immediate
+exit
+poweroff
+
+

@@ -1,0 +1,15 @@
+    public void testNewInstance() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
+        //1.获取Class对象
+        String className="com.atguigu.java.fanshe.Person";
+        Class clazz = Class.forName(className);  
+        
+        //利用Class对象的newInstance方法创建一个类的实例
+        Object obj =  clazz.newInstance();
+        System.out.println(obj);
+
+       // 你可以把obj cast成你要的接口，比如
+       //  Car c=(Car) obj;
+    
+       
+    }
+    //结果是：com.atguigu.java.fanshe.Person@2866bb78
